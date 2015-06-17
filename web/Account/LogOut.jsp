@@ -4,7 +4,7 @@
     Author     : PC 18
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page language="java" contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -12,6 +12,9 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <%
+            session.invalidate();
+            request.getRequestDispatcher("/Account/Login").forward(request, response);           
+        %>
     </body>
 </html>

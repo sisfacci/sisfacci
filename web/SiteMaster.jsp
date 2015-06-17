@@ -92,5 +92,10 @@
                 </div>
             </div>
         </header>        
+        <div id="body" class="container">
+            <section class="content-wrapper main-content clear-fix">
+                
+            </section>
+        </div>
     </h:body>
 </html>

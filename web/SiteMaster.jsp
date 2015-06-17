@@ -38,7 +38,7 @@
         <header class="bg-dark">
             <div class="navigation-bar bg-gradient-lightBlue">
                 <div class="navigation-bar-content container">
-                    <a href="/" class="element"><span class="icon-grid-view"></span>FkWeb <sup>2.0</sup></a>
+                    <a href="/" class="element"><span class="icon-grid-view"></span>SISFACCI <sup>1.0</sup></a>
                     <span class="element-divider"></span>
                     <a class="element1 pull-menu" href="#"></a>                    
                     <%

@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:p="http://primefaces.org/ui"
+      
       xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
         <title>SISFACCI :: Inicio de Sesión</title>
@@ -23,13 +23,37 @@
         <script src="http://localhost:8084/SISFACCI/Content/js/jquery-ui-1.8.24.js"></script>
     </h:head>
     <h:body class="metro" style="background-color: #efeae3">
-        
+        <header class="bg-dark">
+            <div class="navigation-bar bg-gradient-lightBlue">
+                <div class="navigation-bar-content container">
+                    <a href="/" class="element"><span class="icon-grid-view"></span>SISFACCI <sup>1.0</sup></a>
+                    <span class="element-divider"></span>
+                    <a class="element1 pull-menu" href="#"></a>                    
+                    <ul class="element-menu">                        
+                        <li>
+                            <ul class="dropdown-menu dark opacity" data-role="dropdown">
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="no-tablet-portrait no-phone">
+                        <a class="element place-right" href="/Account/Login" title="Iniciar sesión">
+                            <span class="icon-github"></span>
+                        </a>
+                        <a runat="server" class="element place-right " href="~/Account/Manage.aspx" title="Administrar">
+                        </a><span class="element-divider place-right"></span>
+                        <a runat="server" class="element place-right " href="~/Account/LogOut.aspx" title="Cerrar Sesión"> <span class="icon-exit"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <hr />
         <div id="body" class="container">
             <section class="content-wrapper main-content clear-fix">
                 <div class="grid example">
                     <div class="row">
                         <div class="span6 text-center">
-                            
+                            <span class="icon-locked" style="font-size: 21em; color: #3E3F3E"></span>
                         </div>
                         <div class="span6">
                             <div>
@@ -37,15 +61,21 @@
                                     <legend>Inicio de Sesión</legend>
                                 </fieldset>                                
                                 <h:form>
-                                    <p:panelGrid columns="2" class="container" style="border-style: none;">
-                                        <h:outputText value="Usuario" />
-                                        <p:inputText class="input-control text" value="#{login.username}" />
-                                        <h:outputText value="Contraseña" />
-                                        <p:password class="input-control text" value="#{login.password}" />                                        
-                                        <f:facet name="footer" class="container text-right">
-                                            <p:commandButton value="Iniciar Sesión" action="#{login.loginControl}" />
-                                        </f:facet>
-                                    </p:panelGrid>
+                                                                        
+                                    <h:outputText value="Usuario" />
+                                    <br />
+                                    <div class="input-control text size5" data-role="input-control">
+                                        <h:inputText class="input-control text bd-grayLight" value="#{login.username}" />
+                                    </div>
+                                    <br />
+                                    <h:outputText value="Contraseña" />
+                                    <br />
+                                    <div class="input-control text size5" data-role="input-control">
+                                        <h:inputSecret class="input-control text bd-grayLight" value="#{login.password}" />
+                                    </div>
+                                    <br />
+                                    <h:commandButton value="Iniciar Sesión" class="bd-blue btn success" action="#{login.loginControl}" />
+                                    
                                 </h:form>
                             </div>
                         </div>
@@ -53,7 +83,7 @@
                 </div>
             </section>
         </div>                
-        <p:growl id="notify" sticky="true" showDetail="true"></p:growl>
+        
     </h:body>
 </html>
 

@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>SISFACCI :: Inicio de Sesión</title>
+        <meta name="viewport" content="width=device-width" />
+        <link href="http://localhost:8084/SISFACCI/Content/css/metro-bootstrap.css" rel="stylesheet"/>
+        <link href="http://localhost:8084/SISFACCI/Content/css/metro-bootstrap-responsive.css" rel="stylesheet"/>
+        <link href="http://localhost:8084/SISFACCI/Content/css/iconFont.css" rel="stylesheet"/>
+        <link href="http://localhost:8084/SISFACCI/Content/css/docs.css" rel="stylesheet"/>
+        <link href="http://localhost:8084/SISFACCI/Content/js/prettify/prettify.css" rel="stylesheet"/>
+        <link href="http://localhost:8084/SISFACCI/Content/themes/base/jquery-ui.css" rel="stylesheet"/>
+        
+        <!-- Load JavaScript Libraries -->
+        <script src="http://localhost:8084/SISFACCI/Content/js/jquery/jquery.min.js"></script>
+        <script src="http://localhost:8084/SISFACCI/Content/js/jquery/jquery.widget.min.js"></script>
+        <script src="http://localhost:8084/SISFACCI/Content/js/jquery/jquery.mousewheel.js"></script>
+        <script src="http://localhost:8084/SISFACCI/Content/js/prettify/prettify.js"></script>
+        <script src="http://localhost:8084/SISFACCI/Content/js/load-metro.js"></script>
+        <script src="http://localhost:8084/SISFACCI/Content/js/jquery-ui-1.8.24.js"></script>
+    </h:head>
+    <h:body class="metro" style="background-color: #efeae3">
+        
+        <div id="body" class="container">
+            <section class="content-wrapper main-content clear-fix">
+                <div class="grid example">
+                    <div class="row">
+                        <div class="span6 text-center">
+                            
+                        </div>
+                        <div class="span6">
+                            <div>
+                                <fieldset>
+                                    <legend>Inicio de Sesión</legend>
+                                </fieldset>                                
+                                <h:form>
+                                    <p:panelGrid columns="2" class="container" style="border-style: none;">
+                                        <h:outputText value="Usuario" />
+                                        <p:inputText class="input-control text" value="#{login.username}" />
+                                        <h:outputText value="Contraseña" />
+                                        <p:password class="input-control text" value="#{login.password}" />                                        
+                                        <f:facet name="footer" class="container text-right">
+                                            <p:commandButton value="Iniciar Sesión" action="#{login.loginControl}" />
+                                        </f:facet>
+                                    </p:panelGrid>
+                                </h:form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>                
+        <p:growl id="notify" sticky="true" showDetail="true"></p:growl>
+    </h:body>
+</html>
+

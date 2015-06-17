@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="SISFACCI2PU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>com.facci.entity.Recurso</class>
+    <class>com.facci.entity.Usuario</class>
+    <class>com.facci.entity.Perfilusuario</class>
+    <class>com.facci.entity.Perfilrecurso</class>
+    <class>com.facci.entity.LogActividades</class>
+    <class>com.facci.entity.Rol</class>
+    <class>com.facci.entity.Perfil</class>
+    <class>com.facci.entity.Grupo</class>
+    <class>com.facci.entity.InstrumetoEvaluacion</class>
+    <class>com.facci.entity.SilaboDocentes</class>
+    <class>com.facci.entity.Estudiantes</class>
+    <class>com.facci.entity.Contenidos</class>
+    <class>com.facci.entity.Docentes</class>
+    <class>com.facci.entity.FormaEvaluacion</class>
+    <class>com.facci.entity.TipoBibliografia</class>
+    <class>com.facci.entity.Competencias</class>
+    <class>com.facci.entity.Nivel</class>
+    <class>com.facci.entity.SilaboCompetencias</class>
+    <class>com.facci.entity.AsignaturaAprendizaje</class>
+    <class>com.facci.entity.Paralelos</class>
+    <class>com.facci.entity.Silabo</class>
+    <class>com.facci.entity.Asignatura</class>
+    <class>com.facci.entity.Bibliografia</class>
+    <class>com.facci.entity.Unidad</class>
+    <exclude-unlisted-classes>false</exclude-unlisted-classes>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://192.53.204.9:5432/sisfacci"/>
+      <property name="javax.persistence.jdbc.user" value="sisfacci"/>
+      <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+      <property name="javax.persistence.jdbc.password" value="admin"/>
+    </properties>
+  </persistence-unit>
+</persistence>

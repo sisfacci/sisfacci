@@ -157,11 +157,12 @@ public class csAdministrador {
                     boolean existeGrupo = glo_listaGrupo
                                             .stream()
                                             .filter(y -> y.getId() == item.getIdrecurso().getIdgrupo().getId()).count() > 0;
+                           
 //                    boolean existeRecurso = (em.createNamedQuery("Recurso.findById", Recurso.class)
 //                                        .setParameter("id", item.getIdrecurso().getId()).getResultList().size() > 0);
 //                    boolean existeGrupo = (em.createNamedQuery("Grupo.findById", Grupo.class)
 //                                        .setParameter("id", item.getIdrecurso().getIdgrupo().getId()).getResultList().size() > 0);
-                    
+//                    
                     if ((boolean) item.getIdrecurso().getActivo() && !existeRecurso)
                         glo_listaRecursos.add(item.getIdrecurso());
                     if (!glo_listaGrupo.contains(item.getIdrecurso().getIdgrupo()) && item.getIdrecurso().getIdgrupo() != null && !existeGrupo)
@@ -225,12 +226,11 @@ public class csAdministrador {
                     tmp_menu.Enlaces.add(tmp_itemMenu);
                 }
             }
-            for (Recurso tmp_rec : glo_listaRecursos) {
-                if (tmp_rec.getIdgrupo().getId() == item.getId())
+            if (glo_listaRecursos.stream().filter(p -> p.getIdgrupo().getId() == item.getId()).count() > 0)
                 {
                     menu.add(tmp_menu);
                 }
-            }            
+                      
         }        
         return menu;
     }

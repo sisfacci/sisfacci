@@ -1,3 +1,5 @@
+<%@page language="java" contentType="text/html" pageEncoding="UTF-8"%>
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
@@ -14,7 +16,7 @@
         </h:head>
 
         <h:body>
-            
+            <%= session.getAttribute("menu") %>
             <p:layout fullPage="true">
                 
                 <p:layoutUnit position="north" size="200" resizable="true" closable="false" collapsible="true">

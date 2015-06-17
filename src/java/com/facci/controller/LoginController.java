@@ -46,7 +46,7 @@ public class LoginController implements Serializable{
             session.setAttribute("usuarioObjX",loc_administradorSesion.obtenerUsuario());
             session.setAttribute("menu", loc_administradorSesion.obtenerMenu());
             session.setAttribute("AdministradorSesion", loc_administradorSesion);
-            return "/home.xhtml?faces-redirect=true";
+            return "/prueba.jsp?faces-redirect=true";
         } 
         catch (Exception ex) 
         {

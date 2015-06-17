@@ -83,9 +83,9 @@
                             else
                             {
                         %>
-                                <a runat="server" class="element place-right " href="/Account/Manage" title="Administrar">Hola,<%= session.getAttribute("aliasUsuario").toString() %>! 
+                                <a runat="server" class="element place-right " href="/Account/Manage.jsp?faces-redirect=true" title="Administrar">Hola,<%= session.getAttribute("aliasUsuario").toString() %>! 
                                 </a><span class="element-divider place-right"></span>
-                                <a runat="server" class="element place-right " href="/Account/LogOut" title="Cerrar Sesión"> <span class="icon-exit"></span>
+                                <a runat="server" class="element place-right " href="/SISFACCI/Account/LogOut.jsp?faces-redirect=true" title="Cerrar Sesión"> <span class="icon-exit"></span>
                                 </a>
                         <%  } %>
                     </div>

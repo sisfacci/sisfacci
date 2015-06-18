@@ -33,48 +33,48 @@
                     <legend>Información del Usuario</legend>
                     <input type="hidden" id="id" value="${login.idUsuario}"/>
                     <h:form>
-                    <div class="grid">
-                        <div class="row">
-                            <div class="span6">
-                                <label class="size3 place-left">Username</label>
-                                <div class="input-control text size3 place-left" data-role="input-control">
-                                    <input class="input-control text bd-grayLight" readonly="true" value="${login.username}" />
+                        <div class="grid">
+                            <div class="row">
+                                <div class="span6">
+                                    <label class="size3 place-left">Username</label>
+                                    <div class="input-control text size3 place-left" data-role="input-control">
+                                        <input class="input-control text bd-grayLight" readonly="true" value="${login.username}" />
+                                    </div>
+                                    <label class="size3 place-left">Nombres</label>
+                                    <div class="input-control text size3 place-left" data-role="input-control">                                
+                                        <input id="txtNombres" ReadOnly="true" maxlength="300" value="${login.nombre}"/>
+                                    </div>
+                                    <label class="size3 place-left">Identificación</label>
+                                    <div class="input-control text size3 place-left" data-role="input-control">
+                                        <input id="txtIdentificacion" ReadOnly="true" maxlength="300" value="${login.identificacion}"/>
+                                    </div>
+                                    <label class="size3 place-left">Contraseña</label>
+                                    <div class="input-control text size3 place-left" data-role="input-control">
+                                        <input id="txtContrasena"  type="password" maxlength="300" value="${login.password}"/>
+                                    </div>
+                                    <label class="size3 place-left">Confirmar Contraseña</label>
+                                    <div class="input-control text size3 place-left" data-role="input-control">
+                                        <input id="txtConfirmaContrasena" type="password" maxlength="300" value="${login.password2}"/>
+                                    </div>
                                 </div>
-                                <label class="size3 place-left">Nombres</label>
-                                <div class="input-control text size3 place-left" data-role="input-control">                                
-                                    <input id="txtNombres" ReadOnly="true" maxlength="300" value="${login.nombre}"/>
-                                </div>
-                                <label class="size3 place-left">Identificación</label>
-                                <div class="input-control text size3 place-left" data-role="input-control">
-                                    <input id="txtIdentificacion" ReadOnly="true" maxlength="300" value="${login.identificacion}"/>
-                                </div>
-                                <label class="size3 place-left">Contraseña</label>
-                                <div class="input-control text size3 place-left" data-role="input-control">
-                                    <input id="txtContrasena"  type="password" maxlength="300" value="${login.password}"/>
-                                </div>
-                                <label class="size3 place-left">Confirmar Contraseña</label>
-                                <div class="input-control text size3 place-left" data-role="input-control">
-                                    <input id="txtConfirmaContrasena" type="password" maxlength="300" value="${login.password2}"/>
+                                <div class="span6">
+                                    <label class="size3 place-left">Dirección</label>
+                                    <div class="input-control text size3 place-left" data-role="input-control">
+                                        <input id="txtDireccion" maxlength="300" value="${login.direccion}"/>
+                                    </div>
+                                     <label class="size3 place-left">Teléfono</label>
+                                    <div class="input-control text size3 place-left" data-role="input-control">
+                                        <input id="txtTelefono" onKeyPress="return NumCheck(event, this, false)" maxlength="15" value="${login.telefono}"/>
+                                    </div>
+                                    <label class="size3 place-left">Email</label>
+                                    <div class="input-control text size3 place-left" data-role="input-control">
+                                        <input id="txtEmail" type="email" maxlength="300" value="${login.email}"/>
+                                    </div>
+
+                                    <input type="submit" value="Guardar Cambios" class="btn success" onclick="${login.manageControl()}" />
                                 </div>
                             </div>
-                            <div class="span6">
-                                <label class="size3 place-left">Dirección</label>
-                                <div class="input-control text size3 place-left" data-role="input-control">
-                                    <input id="txtDireccion" maxlength="300" value="${login.direccion}"/>
-                                </div>
-                                 <label class="size3 place-left">Teléfono</label>
-                                <div class="input-control text size3 place-left" data-role="input-control">
-                                    <input id="txtTelefono" onKeyPress="return NumCheck(event, this, false)" maxlength="15" value="${login.telefono}"/>
-                                </div>
-                                <label class="size3 place-left">Email</label>
-                                <div class="input-control text size3 place-left" data-role="input-control">
-                                    <input id="txtEmail" type="email" maxlength="300" value="${login.email}"/>
-                                </div>
-                                
-                                <input type="submit" value="Guardar Cambios" class="btn success" onclick="${login.manageControl()}" />
-                            </div>
-                        </div>
-                    </div> 
+                        </div> 
                     </h:form>
                 </fieldset>
             </div>

@@ -15,7 +15,7 @@
         <%
             session.invalidate();
             //request.getRequestDispatcher("/Account/login.xhtml").include(request, response);           
-            request.getRequestDispatcher("/Account/login.xhtml?faces-redirect=true").forward(request, response); 
+            request.getRequestDispatcher("/").forward(request, response); 
         %>
     </body>
 </html>

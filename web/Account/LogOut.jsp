@@ -14,7 +14,6 @@
     <body>
         <%
             session.invalidate();
-            //request.getRequestDispatcher("/Account/login.xhtml").include(request, response);           
             request.getRequestDispatcher("/").forward(request, response); 
         %>
     </body>
